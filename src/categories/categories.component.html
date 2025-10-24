@@ -1,0 +1,6 @@
+
+<ul>
+  <li *ngFor="let category of categories" >
+    <a [routerLink]="[category.id, 'products']">{{category.name}} </a>
+  </li>
+</ul>

@@ -1,0 +1,31 @@
+import { Component } from '@angular/core';
+import {ProductsService} from "../products.service";
+import {Category} from "../Category";
+import {NgForOf, NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
+
+@Component({
+  selector: 'app-categories',
+  standalone: true,
+  imports: [
+    NgForOf,
+    NgIf,
+    RouterLink
+  ],
+  templateUrl: './categories.component.html',
+  styleUrl: './categories.component.css'
+})
+export class CategoriesComponent {
+  categories!: Category[]
+  constructor(private categoryService: ProductsService) {
+  }
+
+  ngOnInit(){
+    this.getCategories()
+  }
+  getCategories(){
+    this.categoryService.getCategories().subscribe((categories)=>{
+      this.categories=categories;
+    })
+  }
+}

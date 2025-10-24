@@ -1,0 +1,23 @@
+<ul >
+  <li>
+    <a [routerLink]="['/categories']">Categories</a>
+  </li>
+  <li>
+    <a [routerLink]="['/brands']">Brands</a>
+  </li>
+</ul>
+<ul *ngIf="loaded; else loading" class="prod">
+<li *ngFor="let product of products" class ="prod">
+      <img src = "http://localhost:8000/media/{{product.fields.image}}" width="120px" height="120px"/>
+      <h3>{{product.fields.name}}</h3>
+      <h5>{{product.fields.price}}</h5>
+      <h4>{{product.fields.description}}
+      </h4>
+      <h5><button (click)="like(product)">Like</button> <span>Likes: {{product.fields.likes}}</span></h5>
+  <h5><button (click)="copyName(product)">Copy name</button></h5>
+
+</li>
+</ul>
+<ng-template #loading>
+  <p>Products are loading</p>
+</ng-template>

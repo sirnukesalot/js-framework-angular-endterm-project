@@ -1,0 +1,35 @@
+<div>
+  <p >
+    <label>Products</label><br>
+    <select [formControl]="prod">
+      <option value="">Select</option>
+        <option *ngFor="let product of products" [ngValue]="product" >
+          {{product.fields.name}}
+        </option>
+    </select>
+
+  </p>
+  <p>
+    <label>Phone number</label><br>
+    <input name = "phone_number" [(ngModel)] = "newOrder.fields.phone_number" />
+  </p>
+  <p>
+    <label>Address</label><br>
+    <input name ="address" [(ngModel)]="newOrder.fields.address" />
+  </p>
+  <p>
+    <label>Payment method</label><br>
+    <input name = "payment_method" [(ngModel)]="newOrder.fields.payment_method" />
+  </p>
+  <p>
+    <label>Message</label><br>
+    <input name = "message" [(ngModel)]="newOrder.fields.message" />
+  </p>
+  <button (click)="addOrder()">Add order</button>
+</div>
+<h3>Orders</h3>
+<ul >
+  <li *ngFor="let order of order">
+    {{order.fields.message}} {{order.fields.payment_method}}
+  </li>
+</ul>
