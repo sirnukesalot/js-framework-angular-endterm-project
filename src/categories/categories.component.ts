@@ -5,15 +5,14 @@ import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-categories',
-  standalone: true,
-  imports: [
-    NgForOf,
-    NgIf,
-    RouterLink
-  ],
-  templateUrl: './categories.component.html',
-  styleUrl: './categories.component.css'
+    selector: 'app-categories',
+    imports: [
+        NgForOf,
+        NgIf,
+        RouterLink
+    ],
+    templateUrl: './categories.component.html',
+    styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
   categories!: Category[]

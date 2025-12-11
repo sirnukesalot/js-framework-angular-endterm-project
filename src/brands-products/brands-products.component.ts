@@ -5,13 +5,12 @@ import {ProductsService} from "../products.service";
 import {NgForOf} from "@angular/common";
 
 @Component({
-  selector: 'app-brands-products',
-  standalone: true,
-  imports: [
-    NgForOf
-  ],
-  templateUrl: './brands-products.component.html',
-  styleUrl: './brands-products.component.css'
+    selector: 'app-brands-products',
+    imports: [
+        NgForOf
+    ],
+    templateUrl: './brands-products.component.html',
+    styleUrl: './brands-products.component.css'
 })
 export class BrandsProductsComponent {
   products!: NestedProduct[];

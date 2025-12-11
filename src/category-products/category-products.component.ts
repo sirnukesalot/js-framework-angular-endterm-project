@@ -6,14 +6,13 @@ import {ActivatedRoute} from "@angular/router";
 import {NestedProduct} from "../NestedProduct";
 
 @Component({
-  selector: 'app-category-products',
-  standalone: true,
+    selector: 'app-category-products',
     imports: [
         NgForOf,
         NgIf
     ],
-  templateUrl: './category-products.component.html',
-  styleUrl: './category-products.component.css'
+    templateUrl: './category-products.component.html',
+    styleUrl: './category-products.component.css'
 })
 export class CategoryProductsComponent {
 products!: NestedProduct[];

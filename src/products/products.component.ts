@@ -6,16 +6,15 @@ import {NgForOf, NgIf} from "@angular/common";
 import {Clipboard} from '@angular/cdk/clipboard'
 
 @Component({
-  selector: 'app-products',
-  standalone: true,
-  imports: [
-    RouterLink,
-    RouterOutlet,
-    NgIf,
-    NgForOf
-  ],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+    selector: 'app-products',
+    imports: [
+        RouterLink,
+        RouterOutlet,
+        NgIf,
+        NgForOf
+    ],
+    templateUrl: './products.component.html',
+    styleUrl: './products.component.css'
 })
 export class ProductsComponent {
   products!: Product[];

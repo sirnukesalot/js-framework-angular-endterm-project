@@ -6,12 +6,10 @@ import {ProductsService} from "../products.service";
 import {Product} from "../Product";
 
 @Component({
-  selector: 'app-order',
-  standalone: true,
-  imports: [FormsModule, NgForOf, ReactiveFormsModule],
-  templateUrl: './order.component.html',
-  styleUrl: './order.component.css'
-
+    selector: 'app-order',
+    imports: [FormsModule, NgForOf, ReactiveFormsModule],
+    templateUrl: './order.component.html',
+    styleUrl: './order.component.css'
 })
 export class OrderComponent {
   order!: Order[];

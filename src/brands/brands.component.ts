@@ -5,14 +5,13 @@ import {NgForOf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-brands',
-  standalone: true,
-  imports: [
-    NgForOf,
-    RouterLink
-  ],
-  templateUrl: './brands.component.html',
-  styleUrl: './brands.component.css'
+    selector: 'app-brands',
+    imports: [
+        NgForOf,
+        RouterLink
+    ],
+    templateUrl: './brands.component.html',
+    styleUrl: './brands.component.css'
 })
 export class BrandsComponent {
   brands!: Brand[];
