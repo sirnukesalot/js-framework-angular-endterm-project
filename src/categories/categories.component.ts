@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import {ProductsService} from "../products.service";
 import {Category} from "../Category";
-import {NgForOf, NgIf} from "@angular/common";
+
 import {RouterLink} from "@angular/router";
 
 @Component({
     selector: 'app-categories',
     imports: [
-        NgForOf,
-        NgIf,
-        RouterLink
-    ],
+    RouterLink
+],
     templateUrl: './categories.component.html',
     styleUrl: './categories.component.css'
 })

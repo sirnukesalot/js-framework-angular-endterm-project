@@ -1,6 +1,8 @@
 <ul>
-  <li *ngFor="let brand of brands" >
-    <a [routerLink]="[brand.id, 'products']">{{brand.name}} </a>
-  </li>
+  @for (brand of brands; track brand) {
+    <li >
+      <a [routerLink]="[brand.id, 'products']">{{brand.name}} </a>
+    </li>
+  }
 </ul>
 

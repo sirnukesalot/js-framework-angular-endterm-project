@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {NgForOf} from "@angular/common";
+
 import {Order} from "../Order";
 import {ProductsService} from "../products.service";
 import {Product} from "../Product";
 
 @Component({
     selector: 'app-order',
-    imports: [FormsModule, NgForOf, ReactiveFormsModule],
+    imports: [FormsModule, ReactiveFormsModule],
     templateUrl: './order.component.html',
     styleUrl: './order.component.css'
 })

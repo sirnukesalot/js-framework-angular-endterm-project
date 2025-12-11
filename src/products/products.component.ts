@@ -2,17 +2,15 @@ import { Component } from '@angular/core';
 import {ActivatedRoute, RouterLink, RouterOutlet} from "@angular/router";
 import {Product} from "../Product";
 import {ProductsService} from "../products.service";
-import {NgForOf, NgIf} from "@angular/common";
+
 import {Clipboard} from '@angular/cdk/clipboard'
 
 @Component({
     selector: 'app-products',
     imports: [
-        RouterLink,
-        RouterOutlet,
-        NgIf,
-        NgForOf
-    ],
+    RouterLink,
+    RouterOutlet
+],
     templateUrl: './products.component.html',
     styleUrl: './products.component.css'
 })

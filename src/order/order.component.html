@@ -3,9 +3,11 @@
     <label>Products</label><br>
     <select [formControl]="prod">
       <option value="">Select</option>
-        <option *ngFor="let product of products" [ngValue]="product" >
+      @for (product of products; track product) {
+        <option [ngValue]="product" >
           {{product.fields.name}}
         </option>
+      }
     </select>
 
   </p>
@@ -29,7 +31,9 @@
 </div>
 <h3>Orders</h3>
 <ul >
-  <li *ngFor="let order of order">
-    {{order.fields.message}} {{order.fields.payment_method}}
-  </li>
+  @for (order of order; track order) {
+    <li>
+      {{order.fields.message}} {{order.fields.payment_method}}
+    </li>
+  }
 </ul>

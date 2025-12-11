@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import {NestedProduct} from "../NestedProduct";
 import {ActivatedRoute} from "@angular/router";
 import {ProductsService} from "../products.service";
-import {NgForOf} from "@angular/common";
+
 
 @Component({
     selector: 'app-brands-products',
-    imports: [
-        NgForOf
-    ],
+    imports: [],
     templateUrl: './brands-products.component.html',
     styleUrl: './brands-products.component.css'
 })

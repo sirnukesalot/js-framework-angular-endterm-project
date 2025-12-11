@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgForOf, NgIf} from "@angular/common";
+
 import {Product} from "../Product";
 import {ProductsService} from "../products.service";
 import {ActivatedRoute} from "@angular/router";
@@ -7,10 +7,7 @@ import {NestedProduct} from "../NestedProduct";
 
 @Component({
     selector: 'app-category-products',
-    imports: [
-        NgForOf,
-        NgIf
-    ],
+    imports: [],
     templateUrl: './category-products.component.html',
     styleUrl: './category-products.component.css'
 })
