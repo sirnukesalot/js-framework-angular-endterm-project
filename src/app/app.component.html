@@ -1,9 +1,19 @@
 <ul>
-  <li>
-    <a [routerLink]="['/order']">Make order</a>
-  </li>
+   <li> <a [routerLink]="['/profile']" routerLinkActive="active">Profile</a></li>
+    @if (authService.currentUserSignal() == null ){
+        <li><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
+        <li><a [routerLink]="['/register']" routerLinkActive="active">Register</a></li>
+    }
+    @if (authService.currentUserSignal()){
+        <li><a (click)="logout()">Logout</a></li>
+        
+   
+    }
   <li>
     <a [routerLink]="['/products']">Open Products</a>
+  </li>
+  <li>
+    <a [routerLink]="['/categories']"> Categories</a>
   </li>
   <li>
     <a [routerLink]="['/about']"> About us</a>

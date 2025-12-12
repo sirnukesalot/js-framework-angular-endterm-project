@@ -1,0 +1,5 @@
+ @if (authService.currentUserSignal()){
+        <div>{{authService.currentUserSignal()?.username}} - Profile page</div>
+        <div>Your email: {{authService.currentUserSignal()?.email}}</div>
+    }
+<button (click)="logout()">Logout</button>

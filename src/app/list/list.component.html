@@ -1,0 +1,22 @@
+
+<input type="text" [(ngModel)]="searchText" (keyup.enter) = "onSearch()" placeholder="Search for a product">
+<button (click)="onSearch()">Search</button>
+<hr>
+@if (isLoading) {
+  <p>Loading</p>
+}
+@if (errorMessage) {
+  <p class="error">{{ errorMessage }}</p>
+}
+@if (!isLoading && products.length == 0 && searchText) {
+  <p>No products found</p>
+}
+
+@for (product of products; track product) {
+  <app-products
+    [product]="product">
+  </app-products>
+}
+
+
+

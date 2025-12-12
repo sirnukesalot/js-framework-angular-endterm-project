@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ProductsService} from "../products.service";
-import {Category} from "../Category";
+import { ListService } from '../service/list.service';
+import {Category} from "../models/Category";
 
 import {RouterLink} from "@angular/router";
 
@@ -14,15 +14,18 @@ import {RouterLink} from "@angular/router";
 })
 export class CategoriesComponent {
   categories!: Category[]
-  constructor(private categoryService: ProductsService) {
+  isLoading=false;
+  constructor(private listService: ListService) {
   }
 
   ngOnInit(){
-    this.getCategories()
+    this.getCategories();
+    this.isLoading=true;
   }
   getCategories(){
-    this.categoryService.getCategories().subscribe((categories)=>{
+    this.listService.getCategories().subscribe((categories)=>{
       this.categories=categories;
+      this.isLoading=false;
     })
   }
 }

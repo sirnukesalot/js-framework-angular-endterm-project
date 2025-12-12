@@ -1,9 +1,6 @@
-<ul >
+<!-- <ul >
   <li>
     <a [routerLink]="['/categories']">Categories</a>
-  </li>
-  <li>
-    <a [routerLink]="['/brands']">Brands</a>
   </li>
 </ul>
 @if (loaded) {
@@ -22,4 +19,25 @@
   </ul>
 } @else {
   <p>Products are loading</p>
-}
+} -->
+
+
+
+<!-- <ul><li>
+<span class="thumb"><img class="thumb" [src]="game.thumb"></span>
+<span class="title">{{ game.title}}</span>
+<hr>
+<span>Normal Price: </span><span class="normal">{{ game.normalPrice}}</span>
+<span>Sale Price:</span><span class="sale"> {{ game.salePrice}}</span>
+<a [routerLink]="['/games', game.gameID]" class="claim">View Details</a>
+</li>
+</ul> -->
+
+<ul >
+  <li >
+      <img [src]="product.images" width="120px" height="120px">
+      <h3>{{product.title}}</h3>
+      <h5>{{product.price}}$</h5>
+      <h4>{{product.category.name}}</h4>
+  </li>
+</ul>
